@@ -17,11 +17,6 @@ router.get("/", async (req, res) => {
   });
 });
 
-router.get("/:profileid", async (req, res) => {
-  const post = await userpost.findById(req.params.profileid);
-  res.json(post);
-});
-
 router.post("/", async (req, res) => {
   console.log("request....");
   const Post = new userpost({
